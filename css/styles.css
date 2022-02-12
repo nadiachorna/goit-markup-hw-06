@@ -417,16 +417,14 @@ body {
   background-color: var(--footer-background);
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
-  align-items: baseline;
 }
 .footer-container {
-  width: calc(100% / 2);
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .address-container {
-  margin-right: 70px;
+  /* margin-right: 70px; */
 }
 .address {
   font-family: Roboto;
@@ -482,9 +480,6 @@ body {
   fill: white;
 }
 
-.footer-subscribe {
-  width: calc(100% / 2);
-}
 .subscribe-container {
   display: flex;
   align-items: baseline;
@@ -710,7 +705,7 @@ body {
   line-height: calc(23 / 20);
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   color: var(--title-color);
 }
 .form-field {
@@ -725,6 +720,7 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
+  padding-left: 30px;
 
   transition: border 250ms var(--transform);
 }
@@ -802,11 +798,12 @@ body {
   transition: border 250ms var(--transform),
     background-color 250ms var(--transform), border-color 250ms var(--transform);
 }
-.modal-checked-icon:hover,
-.modal-checked-icon:focus {
-  border: 2px solid var(--accent-color);
+
+.modal-check:focus + .modal-checked-icon,
+.modal-check:hover + .modal-checked-icon {
+  border-color: var(--accent-color);
 }
-.modal-check:checked ~ .modal-checked-icon {
+.modal-check:checked + .modal-checked-icon {
   border-color: transparent;
   background-color: var(--accent-color);
 }
